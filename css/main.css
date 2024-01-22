@@ -110,25 +110,84 @@ legend {
   display: block;
 }
 
-:root {
-  --text-color: #1E1E1E;
-  --accent: #E58411;
-  --footer-accent: #F6973F;
-  --footer-bg: #979797;
-  --header-text-color: #FFFFFF;
-  --footer-text-color: #FFFFFF;
-  --text-muted: #8D8D8D;
-  --text-product-blue: #0D1B39;
-  --ui-biruza: #00D6C9;
-  --ui-gray: #7C7C7C;
-  --ui-orange:#E58411;
-  --ui-product-blue: #0D1B39;
-  --font-main: "Gilroy", sans-serif;
-  --font-carts: "Inter", sans-serif;
-  --font-footer-accent: "DM Sans", sans-serif;
+html,
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #1e1e1e;
 }
 
-html, body {
-  font-family: var(--font-main);
-  color: var(--text-color);
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url("./../img/header-bg.jpg");
+  background-size: cover;
+  aspect-ratio: 1440/1084;
+  color: #ffffff;
+  padding-top: 40px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .header {
+    background-image: url("./../img/header-bg@2x.jpg");
+  }
+}
+.header a {
+  color: #ffffff;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 20px;
+}
+
+.nav__logo {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.28px;
+  text-transform: capitalize;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 65px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cart {
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: end;
+  position: relative;
+}
+
+.cart__count {
+  position: absolute;
+  top: 3px;
+  right: -6px;
+  background-color: #e58411;
+  border-radius: 40px;
+  display: inline-block;
+  height: 25px;
+  padding: 0 6px;
+  line-height: 25px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
 }

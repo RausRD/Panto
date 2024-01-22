@@ -1,0 +1,12 @@
+.header {
+	background-image: url('./../img/header-bg.jpg');
+	background-size: cover;
+	aspect-ratio: 1440 / 1084;
+	color: $header-text-color;
+	@include retina-bg(url('./../img/header-bg@2x.jpg'));
+		padding-top: 40px;
+
+	a {
+		color: $header-text-color;
+	}
+}
