@@ -237,6 +237,71 @@ body {
   font-size: 18px;
 }
 
+.nav-list__item {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.nav-list__link {
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+.nav-list__link:hover {
+  opacity: 0.7;
+}
+.nav-list__link--dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.nav-list__link--dropdown::after {
+  content: url("./../img/arrow-down.svg");
+  height: 18px;
+}
+
+.nav-list__sub-nav {
+  opacity: 0;
+  width: 150px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-transform: translate(0%, 10%);
+      -ms-transform: translate(0%, 10%);
+          transform: translate(0%, 10%);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.nav-list__item:hover .nav-list__sub-nav {
+  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.sub-nav {
+  display: grid;
+  gap: 16px;
+  font-size: 14px;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background-color: #2d2f33;
+}
+
+.sub-nav__link {
+  -webkit-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
+}
+.sub-nav__link:hover {
+  color: #e58411;
+}
+
 .cart {
   -ms-flex-item-align: center;
       align-self: center;
