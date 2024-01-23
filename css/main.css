@@ -118,7 +118,7 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1310px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -549,6 +549,9 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 .tab-controls__btn--active {
+  background-color: #fff;
+}
+.tab-controls__btn--active:hover {
   background-color: #fff;
 }
 

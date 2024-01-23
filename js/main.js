@@ -43,8 +43,8 @@ const swiper = new Swiper('.swiper', {
 		},
 	},
 	direction: 'horizontal',
-	loop: true,
-	freeMode: true,
+	// loop: true,
+	// freeMode: true,
 	slidesPerView: 4,
 	spaceBetween: 38,
 
@@ -54,3 +54,32 @@ const swiper = new Swiper('.swiper', {
 		prevEl: '#sliderPrev',
 	},
 })
+
+// Tabs
+const tabBtns = document.querySelectorAll('[data-tab]')
+const tabsProducts = document.querySelectorAll('[data-tab-value]')
+
+for (let btn of tabBtns) {
+	btn.addEventListener('click', function () {
+		for (let btn of tabBtns) {
+			btn.classList.remove('tab-controls__btn--active')
+		}
+
+		this.classList.add('tab-controls__btn--active')
+
+		// Отримуємо значення категорії товарів які потрібно залишити
+		// Відобразити потрібні товари по категоріях і ховаю всі непотріні
+		for (let tab of tabsProducts) {
+			if (this.dataset.tab === 'all') {
+				tab.classList.remove('none')
+			} else {
+				if (tab.dataset.tabValue === this.dataset.tab) {
+					tab.classList.remove('none')
+				} else {
+					tab.classList.add('none')
+				}
+			}
+		}
+		swiper.update()
+	})
+}
