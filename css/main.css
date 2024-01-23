@@ -122,6 +122,9 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+.container--small {
+  max-width: 1094px;
+}
 
 .none {
   display: none !important;
@@ -197,6 +200,14 @@ body {
   top: 74.7232472325%;
 }
 
+.logo {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.28px;
+  text-transform: capitalize;
+  color: #fff !important;
+}
+
 .nav {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
@@ -206,10 +217,6 @@ body {
 .nav__logo {
   -ms-flex-item-align: center;
       align-self: center;
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.28px;
-  text-transform: capitalize;
 }
 
 .nav-list {
@@ -694,4 +701,78 @@ body {
   -webkit-transform: translate(50%, -45%);
       -ms-transform: translate(50%, -45%);
           transform: translate(50%, -45%);
+}
+
+.footer {
+  padding: 118px 0 56px;
+  background-color: #2d2f33;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+}
+.footer a:hover {
+  opacity: 0.6;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
+  gap: 20px;
+  margin-bottom: 118px;
+}
+
+.footer__desc p + p {
+  margin-top: 1em;
+}
+
+.footer__logo {
+  margin-bottom: 29px;
+}
+
+.footer__nav--services {
+  grid-column-start: 3;
+}
+
+.footer__nav-title {
+  margin-bottom: 20px;
+  color: #f6973f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.232px;
+}
+
+.footer__list {
+  display: grid;
+  gap: 16px;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__copy {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.205px;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
 }
