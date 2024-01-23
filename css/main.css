@@ -118,7 +118,7 @@ body {
 }
 
 .container {
-  max-width: 1310px;
+  max-width: 1240px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -262,6 +262,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   max-width: 344px;
   height: 56px;
   padding: 8px 8px 8px 20px;
@@ -279,6 +280,9 @@ body {
 }
 
 .search-form__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 18px;
   font-weight: 500;
   line-height: 150%; /* 27px */
@@ -305,6 +309,8 @@ body {
 }
 
 .search-form__btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 40px;
   height: 40px;
   border-radius: 24px;
