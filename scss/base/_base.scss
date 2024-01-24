@@ -16,3 +16,7 @@ body {
 .none {
 	display: none !important;
 }
+.title-2 {
+	font-size: clamp(32px, 1.702rem + 1.49vw, 42px);
+	font-weight: 700;
+}
