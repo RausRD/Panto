@@ -19,13 +19,23 @@
 					</div>
 					<ul class="nav-list">
 						<li class="nav-list__item">
-							<a href="#!" class="nav-list__link nav-list__link--dropdown">Furniture</a>
+							<a href="#!" class="nav-list__link nav-list__link--dropdown"
+								>Furniture</a
+							>
 							<div class="nav-list__sub-nav">
 								<ul class="sub-nav">
-									<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Home</a></li>
-									<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Services</a></li>
-									<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Products</a></li>
-									<li class="sub-nav__item"><a href="#!" class="sub-nav__link">Contacts</a></li>
+									<li class="sub-nav__item">
+										<a href="#!" class="sub-nav__link">Home</a>
+									</li>
+									<li class="sub-nav__item">
+										<a href="#!" class="sub-nav__link">Services</a>
+									</li>
+									<li class="sub-nav__item">
+										<a href="#!" class="sub-nav__link">Products</a>
+									</li>
+									<li class="sub-nav__item">
+										<a href="#!" class="sub-nav__link">Contacts</a>
+									</li>
 								</ul>
 							</div>
 						</li>
@@ -43,6 +53,9 @@
 						<img class="cart__img" src="./img/cart.svg" alt="" />
 						<div class="cart__count">0</div>
 					</a>
+					<button id="open-mobile-nav" class="nav__btn">
+						<img src="./img/mobile-nav.svg" alt="open navigation" />
+					</button>
 				</nav>
 				<div class="header__content">
 					<h1 class="header__title">
@@ -170,7 +183,50 @@
 				</div>
 			</div>
 		</header>
-		<section class="benefits">
+		<div id="mobile-nav" class="mobile-nav-wrapper">
+			<div class="mobile-nav-header">
+				<a href="#cart" class="mobile__cart">
+					<div href="#!" class="cart">
+						<img class="cart__img" src="./img/cart.svg" alt="" />
+						<div class="cart__count">0</div>
+					</div>
+				</a>
+				<button id="close-mobile-nav" class="mobile-nav-btn-close">
+					<img src="./img/close.svg" alt="close navigation" />
+				</button>
+			</div>
+			<ul class="mobile-nav">
+				<li class="mobile-nav__item">
+					<a href="#!" class="mobile-nav__link mobile-nav__link--dropdown"
+						>Furniture</a
+					>
+					<ul class="mobile-sub-nav">
+						<li class="mobile-sub-nav__item">
+							<a href="#!" class="mobile-sub-nav__link">Home</a>
+						</li>
+						<li class="mobile-sub-nav__item">
+							<a href="#!" class="mobile-sub-nav__link">Services</a>
+						</li>
+						<li class="mobile-sub-nav__item">
+							<a href="#!" class="mobile-sub-nav__link">Products</a>
+						</li>
+						<li class="mobile-sub-nav__item">
+							<a href="#!" class="mobile-sub-nav__link">Contacts</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-nav__item">
+					<a href="#!" class="mobile-nav__link">Shop</a>
+				</li>
+				<li class="mobile-nav__item">
+					<a href="#!" class="mobile-nav__link">About Us</a>
+				</li>
+				<li class="mobile-nav__item">
+					<a href="#!" class="mobile-nav__link">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<section class="benefits none">
 			<div class="container">
 				<div class="benefits__grid">
 					<h2 class="benefits__title">Why Choosing Us</h2>
@@ -201,12 +257,17 @@
 				</div>
 			</div>
 		</section>
-		<section class="products">
+		<section class="products none">
 			<div class="container">
 				<h2 class="products__title">Best Selling Product</h2>
 				<div class="products__tabs">
 					<div class="tab-controls">
-						<button data-tab="all" class="tab-controls__btn tab-controls__btn--active">All</button>
+						<button
+							data-tab="all"
+							class="tab-controls__btn tab-controls__btn--active"
+						>
+							All
+						</button>
 						<button data-tab="chair" class="tab-controls__btn">Chair</button>
 						<button data-tab="bed" class="tab-controls__btn">Beds</button>
 						<button data-tab="sofa" class="tab-controls__btn">Sofa</button>
@@ -571,7 +632,7 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer">
+		<footer class="footer none">
 			<div class="container container--small">
 				<div class="footer__grid">
 					<div class="footer__desc">

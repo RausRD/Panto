@@ -83,3 +83,15 @@ for (let btn of tabBtns) {
 		swiper.update()
 	})
 }
+
+// mobile navigation .mobile-nav-wrapper--open
+const mobileNavOpen = document.querySelector('#open-mobile-nav')
+const mobileNavClose = document.querySelector('#close-mobile-nav')
+const mobileNav = document.querySelector('#mobile-nav')
+
+mobileNavOpen.onclick = function() {
+	mobileNav.classList.add('mobile-nav-wrapper--open')
+}
+mobileNavClose.onclick = function() {
+	mobileNav.classList.remove('mobile-nav-wrapper--open')
+}
