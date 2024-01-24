@@ -7,6 +7,9 @@ for (let btn of infoBtns) {
 
 function showHint(e) {
 	e.stopPropagation()
+	for (let hint of infoHints) {
+		hint.classList.add('none')
+	}
 	this.parentNode.querySelector('.info-hint').classList.toggle('none')
 }
 
@@ -89,9 +92,9 @@ const mobileNavOpen = document.querySelector('#open-mobile-nav')
 const mobileNavClose = document.querySelector('#close-mobile-nav')
 const mobileNav = document.querySelector('#mobile-nav')
 
-mobileNavOpen.onclick = function() {
+mobileNavOpen.onclick = function () {
 	mobileNav.classList.add('mobile-nav-wrapper--open')
 }
-mobileNavClose.onclick = function() {
+mobileNavClose.onclick = function () {
 	mobileNav.classList.remove('mobile-nav-wrapper--open')
 }

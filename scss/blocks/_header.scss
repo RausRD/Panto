@@ -12,7 +12,7 @@
 	}
 }
 .header__nav {
-	margin-bottom: 40px;
+	margin-bottom: clamp(20px, 0.893rem + 1.79vw, 40px);
 }
 
 .header__content {
@@ -20,7 +20,7 @@
 	p {
 		max-width: 606px;
 		margin: 0 auto;
-		font-size: 24px;
+		font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
 		line-height: 160%;
 		opacity: 0.8;
 	}
@@ -31,11 +31,19 @@
 }
 .header__title {
 	font-weight: 700;
-	font-size: 80px;
+	// font-size: 80px;
+	font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
+	text-wrap: balance;
 	line-height: 130%;
 	letter-spacing: -0.8px;
 	text-transform: capitalize;
 	margin-bottom: 14px;
+}
+.header__dot {
+	position: absolute;
+	@include mobile-xl() {
+		display: none;
+	}
 }
 .header__dot-sofa {
 	position: absolute;

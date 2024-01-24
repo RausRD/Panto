@@ -168,7 +168,7 @@ body {
 
 .header__title {
   font-weight: 700;
-  font-size: 80px;
+  font-size: clamp(1.75rem, 0.821rem + 4.64vw, 5rem);
   line-height: 130%;
   letter-spacing: -0.8px;
   text-transform: capitalize;
@@ -867,6 +867,7 @@ body {
 .mobile-nav-wrapper {
   display: none;
   position: absolute;
+  z-index: 9;
   right: 0;
   top: 0;
   bottom: 0;
@@ -877,6 +878,9 @@ body {
 }
 .mobile-nav-wrapper--open {
   display: block;
+}
+.mobile-nav-wrapper a {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .mobile-nav {

@@ -1,6 +1,7 @@
 .mobile-nav-wrapper {
 	display: none;
 	position: absolute;
+	z-index: 9;
 	right: 0;
 	top: 0;
 	bottom: 0;
@@ -10,6 +11,9 @@
 	color: $footer-text-color;
 	&--open {
 		display: block;
+	}
+	a {
+		color: $footer-text-color;
 	}
 }
 .mobile-nav {
